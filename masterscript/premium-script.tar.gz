@@ -384,9 +384,9 @@ cat /var/tmp/openvpn.txt | xargs | sed -e 's/ /,/g' > /var/tmp/openvpn2.txt
 portopenvpn=`cat /var/tmp/openvpn2.txt`
 echo "OpenVPN: Normal. Berlajan di Port $portopenvpn" > /var/tmp/hasil-openvpn.txt
 else
-echo "OpenVPN: Tidak Normal. (Tidak Berjalan)" > /var/tmp/hasil-openvpn.txt
+echo "OpenVPN: ไม่ปกติ (ไม่ทำงาน)" > /var/tmp/hasil-openvpn.txt
 echo "- Ketik service openvpn restart pada putty" >> /var/tmp/solusi.txt
-echo "(Apabila muncul tulisan no such device saat openvpn di restart, silahkan disable Tun/Tap lalu enable lagi" >> /var/tmp/solusi.txt
+echo "(หากมีอุปกรณ์เขียนใด ๆ เช่น openvpn เมื่อเริ่มระบบใหม่โปรดปิดการใช้งาน Tun / Tap แล้วเปิดใช้งานอีกครั้ง" >> /var/tmp/solusi.txt
 fi
 
 #Webmin
@@ -394,7 +394,7 @@ netstat -ntlp | grep 10000 | awk '{print $4}' | cut -d ":" -f 2 > /var/tmp/webmi
 if [[ -s /var/tmp/webmin.txt ]] ; then
 cat /var/tmp/webmin.txt | xargs | sed -e 's/ /,/g' > /var/tmp/webmin2.txt
 portwebmin=`cat /var/tmp/webmin2.txt`
-echo "Webmin: Normal. Berlajan di Port $portwebmin" > /var/tmp/hasil-webmin.txt
+echo "Webmin: ปกติ กำลังทำงานใน Port $ webmin port" > /var/tmp/hasil-webmin.txt
 else
 echo "Webmin: Tidak Normal. (Tidak Berjalan)" > /var/tmp/hasil-webmin.txt
 echo "- Ketik service webmin restart pada putty" >> /var/tmp/solusi.txt
@@ -412,14 +412,14 @@ echo "- Ketik service nginx restart pada putty" >> /var/tmp/solusi.txt
 fi
 
 echo "Diagnosa VPS Otomatis"
-echo "(Created By Kang Wahid)"
+echo "Modified by THIRD)"
 echo "-------------------------------------------"
-echo "PENGECEKAN INTERFACE"
+echo "กำลังตรวจสอบ INTERFACE"
 echo " "
 echo "Operating System: $OS"
 echo "Architechture: $arch"
 echo "-------------------------------------------"
-echo "PENGECEKAN APLIKASI"
+echo "การตรวจสอบใบสมัคร"
 echo " "
 cat /var/tmp/hasil-openssh.txt
 cat /var/tmp/hasil-dropbear.txt
@@ -430,9 +430,9 @@ cat /var/tmp/hasil-nginx.txt
 echo "-------------------------------------------"
 cat /var/tmp/solusi.txt
 echo "-------------------------------------------"
-echo "Apakah Anda mau menjalankan auto-fix? "
-echo "1) Ya"
-echo "2) Tidak"
+echo "คุณต้องการเรียกใช้การแก้ไขอัตโนมัติ? "
+echo "1) Yes"
+echo "2) No"
 read -p "Tulis Pilihan Anda (angka): " x
 if test $x -eq 1; then
 if [[ -e /etc/debian_version ]]; then
@@ -464,14 +464,14 @@ service crond start
 clear
 fi
 echo "Diagnosa VPS Otomatis"
-echo "(Created By VPS-Murah.net)"
+echo "(Modified by THIRD)"
 echo "-------------------------------------------"
-echo "Proses Auto Fix Telah Selesai."
+echo "ดำเนินการขั้นตอนการแก้ไขอัตโนมัติแล้ว."
 # runs this if option 2 is selected
 elif test $x -eq 2; then
 exit
 else
-echo "Pilihan tidak terdapat di menu."
+echo "ตัวเลือกไม่อยู่ในเมนู."
 exit
 fi
 edit-port0100777000000000000000000000150713133476545007664 0ustar00#!/bin/bash
@@ -1172,7 +1172,7 @@ listpassword0100777000000000000000000000011013133476644010500 0ustar00#!/bin/bas
 curl api.vps-murah.net/api/password-list.txt
 echo ""
 echo ""log-ban0100777000000000000000000000115113133476661007266 0ustar00#!/bin/bash
-echo "Script by Kang wahid"
+echo "Modified by THIRD"
 echo "Terimakasih sudah berlangganan di Kang wahid"
 echo "===============================================";
 echo " ";
@@ -1219,41 +1219,41 @@ echo "mtr"
 echo "" 
 echo "Script"  
 echo "------" 
-echo "Premium Script telah terinstall pada server Anda!" 
-echo "Ketik premium-script untuk menampilkan menu dari premium script."
-echo "Penjelasan dari kegunaan premium script dapat dilihat di sebsite"  
+echo "มีการติดตั้ง Premium Script ไว้ในเซิร์ฟเวอร์ของคุณ!" 
+echo "พิมพ์ premium-script เพื่อแสดงเมนูจากพรีเมี่ยมสคริปต์."
+echo "คำอธิบายเกี่ยวกับประโยชน์ของสคริปต์พรีเมี่ยมสามารถดูได้บนเว็บไซต์"  
 echo ""  
-echo "Fitur lain" 
+echo "คุณสมบัติอื่น ๆ" 
 echo "----------"  
 echo "Webmin   : http://$MYIP:10000/"  
 echo "vnstat   : http://$MYIP:85/vnstat/"  
 echo "MRTG     : http://$MYIP:85/mrtg/"  
-echo "Timezone : Asia/Jakarta"  
+echo "Timezone : Asia/Bangkok"  
 echo "Fail2Ban : [on]"  
 echo "IPv6     : [off]"  
 echo "" 
 echo "==============================================="  
 log-limit0100777000000000000000000000116213133476712007643 0ustar00#!/bin/bash
-echo "Script by Kang wahid"
-echo "Terimakasih sudah berlangganan di Kang wahid"
+echo "Modified by THIRD"
+echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
 echo "===============================================";
 echo " ";
 if [ -e "/root/log-limit.txt" ]; then
-echo "User yang dikick oleh user-limit adalah";
-echo "Waktu - Username - Jumlah Multilogin"
+echo "ผู้ใช้ที่ขีดฆ่าโดยผู้ใช้มีขีด จำกัด";
+echo "เวลา - ชื่อผู้ใช้ - จำนวน Multilogin"
 echo "-------------------------------------";
 cat /root/log-limit.txt
 else
-echo " Tidak ada user yang melakukan pelanggaran"
-echo " Atau"
-echo " Script user-limit belum dijalankan"
+echo " ไม่มีผู้ใช้รายใดกระทำผิดกฎหมาย"
+echo " หรือ"
+echo " ยังไม่มีการเรียกใช้สคริปต์ขีด จำกัด ของผู้ใช้"
 fi
 echo " ";
 echo "===============================================";
-echo "Script Created by Kang Wahid";
-echo "Terimakasih sudah berlanggan di Kang Wahid";
+echo "Modified by THIRD";
+echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN";
 pengumuman.sh0100777000000000000000000000033413133447015010525 0ustar00#!/bin/bash
-# Created by Kang Wahid
+# Modified by THIRD
 # Dilarang Keras Mengambil/mencuplik/mengcopy sebagian atau seluruh script ini.
 # Hak Cipta Kang Wahid (Dilindungi Undang-Undang nomor 19 Tahun 2002)
 curl Kang Wahid/index.html
@@ -1267,13 +1267,13 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	RCLOCAL='/etc/rc.d/rc.local'
 	chmod +x /etc/rc.d/rc.local
 else
-	echo "Sepertinya Anda tidak menjalankan installer ini pada sistem Debian, Ubuntu atau CentOS"
+	echo "ดูเหมือนว่าคุณไม่ได้ใช้ตัวติดตั้งนี้ในระบบ Debian, Ubuntu หรือ CentOS"
 	exit
 fi
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-echo "--------------- Selamat Datang di Script Menu ---------------"
+echo "--------------- ยินดีต้อนรับสู่เมนูสคริปต์ ---------------"
 	echo ""
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -1288,60 +1288,60 @@ echo "--------------- Selamat Datang di Script Menu ---------------"
 	echo -e "\e[032;1mTotal amount of ram:\e[0m $tram MB"
 	echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	echo -e "\e[032;1mSystem uptime:\e[0m $up"
-	echo -e "------------------------------------------------------------------------------"
-	echo -e "Seputar SSH & OpenVPN"
-	echo -e "${color1}1${color3}.  Buat akun SSH & OpenVPN (${color2}user-add${color3})"
-	echo -e "${color1}2${color3}.  Generate akun SSH/OpenVPN (${color2}user-generate${color3})"
-	echo -e "${color1}3${color3}.  Buat account trial untuk SSH & OpenVPN (${color2}trial${color3})"
-	echo -e "${color1}4${color3}.  Tambah masa aktif akun SSH & OpenVPN (${color2}user-aktif${color3})"
-	echo -e "${color1}5${color3}.  Ganti password akun SSH/OpenVPN (${color2}user-password${color3})"
-	echo -e "${color1}6${color3}.  Bannned user yang melakukan multilogin (${color2}user-ban${color3})"
-	echo -e "${color1}7${color3}.  Unbanned user SSH & OpenVPN yang terbanned (${color2}user-unban${color3})"
-	echo -e "${color1}8${color3}.  Mengunci user SSH & OpenVPN (${color2}user-lock${color3})"
-	echo -e "${color1}9${color3}.  Membuka user SSH & OpenVPN yang terkunci (${color2}user-unlock${color3})"
-	echo -e "${color1}10${color3}. Hapus Akun SSH & OpenVPN (${color2}user-delete${color3})"
-	echo -e "${color1}11${color3}. Lihat detail user SSH & OpenVPN (${color2}user-detail${color3})"
-	echo -e "${color1}12${color3}. Tampilkan daftar user SSH & OpenVPN (${color2}user-list${color3})"
-	echo -e "${color1}13${color3}. Cek login Dropbear, OpenSSH, dan OpenVPN (${color2}user-login${color3})"
-	echo -e "${color1}14${color3}. Lihat log login Dropbear & OpenSSH (${color2}user-log${color3})"
-	echo -e "${color1}15${color3}. Kill Multi Login (${color2}user-limit${color3})"
-	echo -e "${color1}16${color3}. Tampilkan user yang akan expired dalam waktu dekat(${color2}infouser${color3})"
-	echo -e "${color1}17${color3}. Tampilkan user yang telah expired (${color2}expireduser${color3})"
-	echo -e "${color1}18${color3}. Hapus user SSH & OpenVPN yang telah expired (${color2}user-delete-expired${color3})"
-	echo -e "${color1}19${color3}. Kunci user SSH & OpenVPN yang telah expired (${color2}user-expire${color3})"
-	echo -e "${color1}20${color3}. Lihat daftar user yang terkick (${color2}log-limit${color3})"
-	echo -e "${color1}21${color3}. Lihat daftar user yang terbanned (${color2}log-ban${color3})"
-	echo -e "${color1}22${color3}. Buat akun PPTP VPN (${color2}user-add-pptp${color3})"
-	echo -e "${color1}23${color3}. Hapus akun PPTP VPN (${color2}user-delete-pptp${color3})"
-	echo -e "${color1}24${color3}. Lihat detail akun PPTP VPN (${color2}user-detail-pptp${color3})"
-	echo -e "${color1}25${color3}. Cek login PPTP VPN (${color2}user-login-pptp${color3})"
-	echo -e "${color1}26${color3}. Lihat daftar user PPTP VPN (${color2}alluser-pptp${color3})"
-	echo -e "${color1}27${color3}. Speedtest server (${color2}speedtest --share${color3})"
-	echo -e "${color1}28${color3}. Benchmark server (${color2}bench-network${color3})"
-	echo -e "${color1}29${color3}. Lihat penggunaan RAM server (${color2}ram${color3})"
+	echo -e "------------------------------------THIRD-VPN------------------------------------"
+	echo -e "เกี่ยวกับ SSH & OpenVPN"
+	echo -e "${color1}1${color3}.  สร้างบัญชี (${color2}user-add${color3})"
+	echo -e "${color1}2${color3}.  สร้างบัญชีแบบสุ่ม (${color2}user-generate${color3})"
+	echo -e "${color1}3${color3}.  สร้างบัญชีทดลอง (${color2}trial${color3})"
+	echo -e "${color1}4${color3}.  เพิ่มวันใช้งานบัญขี (${color2}user-aktif${color3})"
+	echo -e "${color1}5${color3}.  เปลี่ยนรหัสผ่านบัญชี  (${color2}user-password${color3})"
+	echo -e "${color1}6${color3}.  ผู้ใช้ที่ถูกแบนที่เข้าสู่ระบบหลายบัญชี (${color2}user-ban${color3})"
+	echo -e "${color1}7${color3}.  ยกเลิกการใช้งานผู้ที่ไม่ได้รับอนุญาต (${color2}user-unban${color3})"
+	echo -e "${color1}8${color3}.  ล็อคผู้ใช้ (${color2}user-lock${color3})"
+	echo -e "${color1}9${color3}.  ปลดล็อคผู้ใช้ (${color2}user-unlock${color3})"
+	echo -e "${color1}10${color3}. ลบบัญชี (${color2}user-delete${color3})"
+	echo -e "${color1}11${color3}. ดูรายละเอียดผู้ใช้ (${color2}user-detail${color3})"
+	echo -e "${color1}12${color3}. แสดงรายชื่อผู้ใช้ (${color2}user-list${color3})"
+	echo -e "${color1}13${color3}. ตรวจสอบการเข้าสู่ระบบ (${color2}user-login${color3})"
+	echo -e "${color1}14${color3}. ดูบันทึกการเข้าสู่ระบบ (${color2}user-log${color3})"
+	echo -e "${color1}15${color3}. ลบการเข้าสู่ระบบแบบ Multi (${color2}user-limit${color3})"
+	echo -e "${color1}16${color3}. แสดงผู้ใช้ที่จะหมดอายุ(${color2}infouser${color3})"
+	echo -e "${color1}17${color3}. แสดงผู้ใช้ที่หมดอายุแล้ว (${color2}expireduser${color3})"
+	echo -e "${color1}18${color3}. ลบผู้ใช้หมดอายุ (${color2}user-delete-expired${color3})"
+	echo -e "${color1}19${color3}. ล็อกผู้ใช้ที่หมดอายุแล้ว (${color2}user-expire${color3})"
+	echo -e "${color1}20${color3}. ดูรายชื่อผู้ใช้ที่สนใจ (${color2}log-limit${color3})"
+	echo -e "${color1}21${color3}. ดูรายชื่อผู้ใช้ที่ถูกสั่งห้าม (${color2}log-ban${color3})"
+	echo -e "${color1}22${color3}. สร้างบัญชี PPTP VPN (${color2}user-add-pptp${color3})"
+	echo -e "${color1}23${color3}. ลบบัญชี PPTP VPN (${color2}user-delete-pptp${color3})"
+	echo -e "${color1}24${color3}. ดูรายละเอียดบัญชี PPTP VPN (${color2}user-detail-pptp${color3})"
+	echo -e "${color1}25${color3}. ตรวจสอบการเข้าสู่ระบบ PPTP VPN (${color2}user-login-pptp${color3})"
+	echo -e "${color1}26${color3}. ดูรายชื่อผู้ใช้ PPTP VPN (${color2}alluser-pptp${color3})"
+	echo -e "${color1}27${color3}. ทดสอบความเร็ว (${color2}speedtest --share${color3})"
+	echo -e "${color1}28${color3}. เซิร์ฟเวอร์เกณฑ์มาตรฐาน (${color2}bench-network${color3})"
+	echo -e "${color1}29${color3}. ดูการใช้งาน ram ของเซิฟเวอร์ (${color2}ram${color3})"
 if [[ "$OS" = 'debian' ]]; then 
-	echo -e "${color1}30${color3}. Restart OpenSSH (${color2}service ssh restart${color3})"
-	echo -e "${color1}31${color3}. Restart Dropbear (${color2}service dropbear restart${color3})"
-	echo -e "${color1}32${color3}. Restart OpenVPN (${color2}service openvpn restart${color3})"
-	echo -e "${color1}33${color3}. Restart PPTP VPN (${color2}service pptpd restart${color3})"
-	echo -e "${color1}34${color3}. Restart Webmin (${color2}service webmin restart${color3})"
-	echo -e "${color1}35${color3}. Restart Squid Proxy (${color2}service squid3 restart${color3})"
+	echo -e "${color1}30${color3}. รีสตาร์ท OpenSSH (${color2}service ssh restart${color3})"
+	echo -e "${color1}31${color3}. รีสตาร์ท Dropbear (${color2}service dropbear restart${color3})"
+	echo -e "${color1}32${color3}. รีสตาร์ท OpenVPN (${color2}service openvpn restart${color3})"
+	echo -e "${color1}33${color3}. รีสตาร์ท PPTP VPN (${color2}service pptpd restart${color3})"
+	echo -e "${color1}34${color3}. รีสตาร์ท Webmin (${color2}service webmin restart${color3})"
+	echo -e "${color1}35${color3}. รีสตาร์ท Squid Proxy (${color2}service squid3 restart${color3})"
 else
-	echo -e "${color1}30${color3}. Restart OpenSSH (${color2}service sshd restart${color3})"
-	echo -e "${color1}31${color3}. Restart Dropbear (${color2}service dropbear restart${color3})"
-	echo -e "${color1}32${color3}. Restart OpenVPN (${color2}service openvpn restart${color3})"
-	echo -e "${color1}33${color3}. Restart PPTP VPN (${color2}service pptpd restart${color3})"
-	echo -e "${color1}34${color3}. Restart Webmin (${color2}service webmin restart${color3})"
-	echo -e "${color1}35${color3}. Restart Squid Proxy (${color2}service squid restart${color3})"
+	echo -e "${color1}30${color3}. รีสตาร์ท OpenSSH (${color2}service sshd restart${color3})"
+	echo -e "${color1}31${color3}. รีสตาร์ท Dropbear (${color2}service dropbear restart${color3})"
+	echo -e "${color1}32${color3}. รีสตาร์ท OpenVPN (${color2}service openvpn restart${color3})"
+	echo -e "${color1}33${color3}. รีสตาร์ท PPTP VPN (${color2}service pptpd restart${color3})"
+	echo -e "${color1}34${color3}. รีสตาร์ท Webmin (${color2}service webmin restart${color3})"
+	echo -e "${color1}35${color3}. รีสตาร์ท Squid Proxy (${color2}service squid restart${color3})"
 fi
-echo -e "${color1}36${color3}. Edit Port Server (${color2}edit-port${color3})"
-echo -e "${color1}37${color3}. Set auto reboot pada server (${color2}auto-reboot${color3})"
-echo -e "${color1}38${color3}. Reboot server(${color2}reboot${color3})"
-echo -e "${color1}39${color3}. Ganti Password Server(${color2}passwd${color3})"
-echo -e "${color1}40${color3}. Lihat log instalasi (${color2}log-install${color3})"
-echo -e "${color1}41${color3}. Update now"
+echo -e "${color1}36${color3}. แก้ไขพอร์ตเซิร์ฟเวอร์ (${color2}edit-port${color3})"
+echo -e "${color1}37${color3}. ตั้งค่าเซิร์ฟเวอร์รีบูตอัตโนมัติ (${color2}auto-reboot${color3})"
+echo -e "${color1}38${color3}. รีสตาร์ทเซิร์ฟเวอร์(${color2}reboot${color3})"
+echo -e "${color1}39${color3}. เปลี่ยนรหัสผ่านเซิร์ฟเวอร์(${color2}passwd${color3})"
+echo -e "${color1}40${color3}. ดูบันทึกการติดตั้ง (${color2}log-install${color3})"
+echo -e "${color1}41${color3}. อัปเดตเดี๋ยวนี้"
 echo "-------------------------------------------"
-read -p "Tulis Pilihan Anda (angka): " x
+read -p "โปรดใส่ตัวเลือกเมนู (ตัวเลข): " x
 if test $x -eq 1; then
 user-add
 elif test $x -eq 2; then
