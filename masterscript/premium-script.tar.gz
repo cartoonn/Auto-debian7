@@ -482,15 +482,15 @@ fi
 while :
 do
 	clear
-	echo "Menu Pilihan Edit Port"
-	echo -e "\e[031;1m 1\e[0m) Edit Port OpenSSH (\e[34;1medit-port-openssh\e[0m)"
-	echo -e "\e[031;1m 2\e[0m) Edit Port Dropbear (\e[34;1medit-port-dropbear\e[0m)"
-	echo -e "\e[031;1m 3\e[0m) Edit Port Squid Proxy (\e[34;1medit-port-squid\e[0m)"
-	echo -e "\e[031;1m 4\e[0m) Edit Port OpenVPN (\e[34;1medit-port-openvpn\e[0m)"
+	echo "เมนูตัวเลือกแก้ไขพอร์ต"
+	echo -e "\e[031;1m 1\e[0m) แก้ไข Port OpenSSH (\e[34;1medit-port-openssh\e[0m)"
+	echo -e "\e[031;1m 2\e[0m) แก้ไข Port Dropbear (\e[34;1medit-port-dropbear\e[0m)"
+	echo -e "\e[031;1m 3\e[0m) แก้ไข Port Squid Proxy (\e[34;1medit-port-squid\e[0m)"
+	echo -e "\e[031;1m 4\e[0m) แก้ไข Port OpenVPN (\e[34;1medit-port-openvpn\e[0m)"
 	echo ""
-	echo -e "\e[031;1m x\e[0m) Exit"
+	echo -e "\e[031;1m x\e[0m) ออก"
 	echo ""
-	read -p "Masukkan pilihan anda, kemudian tekan tombol ENTER: " option2
+	read -p "ป้อนตัวเลือกจากนั้นกดปุ่ม ENTER: " option2
 	case $option2 in
 		1)
 		clear
@@ -522,7 +522,7 @@ cd
 edit-port-dropbear0100777000000000000000000001072413133602732011446 0ustar00#!/bin/bash
 #Cek ROOT
 if [[ $USER != "root" ]]; then
-	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	echo "ขออภัยคุณต้องเรียกใช้งานนี้เป็น root"
 	exit
 fi
 
@@ -532,7 +532,7 @@ if [[ -e /etc/debian_version ]]; then
 elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	OS=centos
 else
-	echo "Sepertinya Anda tidak menjalankan script ini pada sistem Debian, Ubuntu atau CentOS"
+	echo "ดูเหมือนว่าคุณไม่ได้เรียกใช้สคริปต์นี้ในระบบ Debian, Ubuntu หรือ CentOS"
 	exit
 fi
 
@@ -691,7 +691,7 @@ fi
 cdedit-port-openssh0100777000000000000000000001035013133476466011337 0ustar00#!/bin/bash
 #Cek ROOT
 if [[ $USER != "root" ]]; then
-	echo "Maaf. Anda harus menjalankan ini sebagai root"
+	echo "ขออภัยคุณต้องเรียกใช้งานนี้เป็น root"
 	exit
 fi
 
@@ -701,7 +701,7 @@ if [[ -e /etc/debian_version ]]; then
 elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	OS=centos
 else
-	echo "Sepertinya Anda tidak menjalankan script ini pada sistem Debian, Ubuntu atau CentOS"
+	echo "ดูเหมือนว่าคุณไม่ได้เรียกใช้สคริปต์นี้ในระบบ Debian, Ubuntu หรือ CentOS"
 	exit
 fi
 
@@ -853,7 +853,7 @@ fi
 cdedit-port-openvpn0100777000000000000000000000773113133603004011332 0ustar00#!/bin/bash
 #Cek ROOT
 if [[ $USER != "root" ]]; then
-	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	echo "ขออภัยคุณต้องเรียกใช้งานนี้เป็น root"
 	exit
 fi
 
@@ -1012,7 +1012,7 @@ fi
 cdedit-port-squid0100777000000000000000000001003213133602752010767 0ustar00#!/bin/bash
 #Cek ROOT
 if [[ $USER != "root" ]]; then
-	echo "Maaf, Anda harus menjalankan ini sebagai root"
+	echo "ขออภัยคุณต้องเรียกใช้งานนี้เป็น root"
 	exit
 fi
 
@@ -1022,7 +1022,7 @@ if [[ -e /etc/debian_version ]]; then
 elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	OS=centos
 else
-	echo "Sepertinya Anda tidak menjalankan script ini pada sistem Debian, Ubuntu atau CentOS"
+	echo "ดูเหมือนว่าคุณไม่ได้เรียกใช้สคริปต์นี้ในระบบ Debian, Ubuntu หรือ CentOS"
 	exit
 fi
 
@@ -1081,7 +1081,7 @@ if [[ "$OS" = 'debian' ]]; then
 	done
 
 	echo ""
-	echo "Mohon Tunggu..."
+	echo "โปรดรอสักครู่..."
 	echo ""
 	service squid3 restart > /dev/null
 	sleep 0.5
@@ -1146,7 +1146,7 @@ else
 		fi
 	done
 	echo ""
-	echo "Mohon Tunggu..."
+	echo "โปรดรอสักครู่..."
 	echo ""
 	service squid restart > /dev/null
 	sleep 0.5
@@ -1173,35 +1173,35 @@ curl api.vps-murah.net/api/password-list.txt
 echo ""
 echo ""log-ban0100777000000000000000000000115113133476661007266 0ustar00#!/bin/bash
 echo "Modified by THIRD"
-echo "Terimakasih sudah berlangganan di Kang wahid"
+echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
 echo "===============================================";
 echo " ";
 if [ -e "/root/log-ban.txt" ]; then
-echo "User yang diban oleh user-ban adalah";
-echo "Waktu - Username - Jumlah Multilogin"
+echo "ผู้ใช้ที่ห้ามโดยผู้ใช้ห้ามคือ";
+echo "เวลา - ชื่อผู้ใช้ - จำนวน Multilogin"
 echo "-------------------------------------";
 cat /root/log-ban.txt
 else
-echo " Tidak ada user yang melakukan pelanggaran"
-echo " Atau"
-echo " Script user-ban belum dijalankan"
+echo " ไม่มีผู้ใช้รายใดกระทำผิดกฎหมาย"
+echo " หรือ"
+echo " สคริปต์ห้ามผู้ใช้ยังไม่เริ่มต้น"
 fi
 echo " ";
 echo "===============================================";
-echo "Script Created by Kang wahid";
-echo "Terimakasih sudah berlanggan di Kang wahid";
+echo "Modified by THIRD";
+echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN";
 log-install0100777000000000000000000000245413117543772010203 0ustar00#!/bin/bash
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 if [ $MYIP = "" ]; then
    MYIP=`ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1`;
 fi
 
-echo "DETAIL INSTALASI DEFAULT"
+echo "รายละเอียดการติดตั้ง DEFAULT"
 echo "==============================================="
 echo "" 
 echo "Service" 
 echo "-------"  
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:85/openvpn.tar.gz)"  
+echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:85/openvpn.ovpn)"  
 echo "OpenSSH  : 22, 90, 143"  
 echo "Dropbear : 109, 110, 443"  
 echo "Squid3   : 80, 8000, 8080 (limit to IP SSH)"  
@@ -1382,9 +1382,9 @@ elif test $x -eq 18; then
 user-delete-expired
 elif test $x -eq 19; then
 clear
-echo "Script ini berjalan secara otomatis setiap jam 12 malam"
-echo "Anda tidak perlu menjalankannya secara manual"
-echo "Jika anda tetap ingin menjalankan script ini, ketik user-expire"
+echo "สคริปต์นี้จะทำงานโดยอัตโนมัติทุกๆ 12 ชั่วโมง"
+echo "คุณไม่จำเป็นต้องเรียกใช้ด้วยตนเอง"
+echo "หากคุณยังต้องการเรียกใช้สคริปต์นี้ให้พิมพ์ user-expire"
 elif test $x -eq 20; then
 log-limit
 elif test $x -eq 21; then
@@ -1440,9 +1440,9 @@ passwd
 elif test $x -eq 40; then
 log-install
 elif test $x -eq 41; then
-wget https://raw.githubusercontent.com/rotipisju/MASTER/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://raw.githubusercontent.com/cartoonn/Auto-debian7/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
 else
-echo "Pilihan Tidak Terdapat Di Menu."
+echo "ไม่พบตัวเลือกในเมนู."
 exit
 firam0100777000000000000000000005236213117543772006540 0ustar00#!/usr/bin/env python
 
@@ -3533,15 +3533,15 @@ if __name__ == '__main__':
 # vim:ts=4:sw=4:expandtab
 trial0100777000000000000000000000261413133476761007070 0ustar00#!/bin/bash
 clear
-echo "Please Wait..."
+echo "โปรดรอสักครู่..."
 sleep 0.5
-echo "Generating Account..."
+echo "กำลังสร้างบัญชี..."
 sleep 0.5
-echo "Generating Host..."
+echo "กำลังสร้างโฮสต์..."
 sleep 0.5
-echo "Generating Username..."
+echo "กำลังสร้างชื่อผู้ใช้..."
 sleep 0.5
-echo "Generating Password..."
+echo "กำลังสร้างรหัสผ่าน..."
 sleep 1
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 passrandom=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
@@ -3553,16 +3553,16 @@ if [ $? -eq 0 ]; then
   echo -e "$passrandom\n$passrandom" | passwd $username
   clear
   echo " "
-  echo "Script by vps-murah.net"
-  echo "Terimakasih sudah berlangganan di vps-murah.net"
+  echo "Script by THIRD-VPN"
+  echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
   echo " "
-  echo "Demikian Detail Account Trial Anda"
+  echo "รายละเอียดบัญชีทดลองใช้ของคุณ"
   echo "------------------------------"
   echo "   Host     : $MYIP" 
   echo "   Username : $username"
   echo "   Password : $passrandom"
   echo "   Port     : 22,80,109,143,443"
-  echo "------------------------------"
+  echo "   http://$MYIP:85/client.ovpn"
   echo " "
   
 else
@@ -3572,16 +3572,16 @@ else
   echo -e "$passrandom\n$passrandom" | passwd $username
   clear
   echo " "
-  echo "Script by Kang wahid"
-  echo "Terimakasih sudah berlangganan di Kang wahid"
+  echo "Script by THIRD-VPN"
+  echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
   echo " "
-  echo "Demikian Detail Account Trial Anda"
+  echo "รายละเอียดบัญชีทดลองใช้ของคุณ"
   echo "------------------------------"
   echo "   Host     : $MYIP"
   echo "   Username : $username"
   echo "   Password : $passrandom"
   echo "   Port     : 22,80,109,143,443"
-  echo "------------------------------"
+  echo "   http://$MYIP:85/client.ovpn"
   echo " "
 fiuser-add0100777000000000000000000000276513133477110007455 0ustar00#!/bin/bash
 read -p "Masukkan Username : " username
@@ -3599,15 +3599,15 @@ saat_expired=$(($today + $masa_aktif_detik))
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
 clear
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to THIRD-VPN..."
 sleep 0.4
-echo "Creating Account..."
+echo "สร้างบัญชี..."
 sleep 0.3
-echo "Generating Host..."
+echo "กำลังสร้างโฮสต์..."
 sleep 0.2
-echo "Creating Your New Username: $username"
+echo "การสร้างชื่อผู้ใช้ใหม่ของคุณ: $username"
 sleep 0.2
-echo "Creating Password for $username"
+echo "การสร้างรหัสผ่าน $username"
 sleep 1
 
 
@@ -3617,18 +3617,18 @@ usermod -e  $tanggal_expired $username
   egrep "^$username" /etc/passwd >/dev/null
   echo -e "$password\n$password" | passwd $username
   clear
-  echo "Script by Kang wahid"
-  echo "Terimakasih sudah berlangganan di Kang wahid"
+  echo "Script by THIRD-VPN"
+  echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
   echo " "
-  echo "Demikian Detail Account Yang Telah Dibuat"
+  echo "สร้างบัญชีผู้ใช้ดังกล่าวแล้ว"
   echo "---------------------------------------"
   echo "   Host            : $MYIP"
   echo "   Username        : $username"
   echo "   Password        : $password"
-  echo "   Masa aktif      : $masa_aktif Hari"
-  echo "   Tanggal Expired : $tanggal_expired_display"
+  echo "   เวลาที่ใช้งาน       : $masa_aktif Hari"
+  echo "   วันหมดอายุ        : $tanggal_expired_display"
   echo "   Port            : 22,80,109,143,443"
-  echo "--------------------------------------"
+  echo "   http://$MYIP:85/client.ovpn"
   echo " "
 fiuser-add-pptp0100777000000000000000000000275513133477121010437 0ustar00#!/bin/bash
 if [ -e "/var/lib/premium-script" ]; then
@@ -3652,7 +3652,7 @@ saat_expired=$(($today + $masa_aktif_detik))
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
 clear
-echo "Connecting to Kang wahid..."
+echo "Connecting to THIRD-VPN..."
 sleep 0.5
 echo "Creating Account..."
 sleep 0.2
@@ -3666,16 +3666,16 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 echo "$username	*	$password	*" >> /etc/ppp/chap-secrets
 echo "$username *   $password   *  $saat_expired"  >> /var/lib/premium-script/data-user-pptp
   clear
-  echo "Script by Kang wahid"
-  echo "Terimakasih sudah berlangganan di Kang wahid"
+  echo "Script by THIRD-VPN"
+  echo "ขอขอบคุณที่สมัครสมาชิก THIRD-VPN"
   echo " "
-  echo "Demikian Detail Account Yang Telah Dibuat"
+  echo "สร้างบัญชีผู้ใช้ดังกล่าวแล้ว"
   echo "---------------------------------------"
   echo "   Host            : $MYIP"
   echo "   Username        : $username"
   echo "   Password        : $password"
-  echo "   Tanggal Expired : $tanggal_expired_display"
-  echo "--------------------------------------"
+  echo "   วันหมดอายุ        : $tanggal_expired_display"
+  echo ".  http://$MYIP:85/client.ovpn"
   echo " "
 fiuser-aktif0100777000000000000000000000233513133477135010023 0ustar00#!/bin/bash
 read -p "Masukkan Username Yang Akan Diperpanjang: " username
@@ -3689,9 +3689,9 @@ saat_expired=$(($today + $masa_aktif_detik))
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
 clear
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to THIRD-VPN..."
 sleep 0.5
-echo "Menambah Masa Aktif..."
+echo "การเพิ่มเวลา..."
 sleep 0.5
 passwd -u $username
 usermod -e  $tanggal_expired $username
@@ -3704,9 +3704,9 @@ usermod -e  $tanggal_expired $username
   echo "รายละเอียดบัญชีแบบขยายดังกล่าว"
   echo "---------------------------------------"
   echo "   ชื่อผู้ใช้        : $username"
-  echo "   ระยะเวลาใช้งาน      : $masa_aktif Hari"
-  echo "   วันหมดอายุ : $tanggal_expired_display"
-  echo "--------------------------------------"
+  echo "   ระยะเวลาใช้งาน  : $masa_aktif Hari"
+  echo "   วันหมดอายุ     : $tanggal_expired_display"
+  echo "   http://$MYIP:85/client.ovpn"
   echo " "
 
 else
@@ -3942,8 +3942,8 @@ do
 			do
                 if [ ${jumlah[$i]} -gt $MAX ]; then
                         date=`date +"%Y-%m-%d %X"`;
-                        echo "VPS-Murah.net - $date - ${username[$i]} - ${jumlah[$i]}";
-                        echo "VPS-Murah.net - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-ban.txt;
+                        echo "VPS-THIRD-VPN - $date - ${username[$i]} - ${jumlah[$i]}";
+                        echo "VPS-THIRD-VPN - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-ban.txt;
                         passwd -l ${username[$i]}
 						kill ${pid[$i]};
                         pid[$i]="";
@@ -3980,7 +3980,7 @@ echo "Username tidak ditemukan di server anda"
     exit 1
 fiuser-delete-expired0100777000000000000000000000324013133477275011626 0ustar00#!/bin/bash
 if [ ! -f /usr/local/bin/deleteduser ]; then
-    echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/deleteduser
+    echo "echo "Script Created By VPS-THIRD-VPN"" > /usr/local/bin/deleteduser
 	chmod +x /usr/local/bin/deleteduser
 fi
 hariini=`date +%d-%m-%Y`
@@ -4006,13 +4006,13 @@ for((i=1; i<=$totalaccounts; i++ ))
            username=$username" " 
        done
        bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-       echo "echo "VPS-Murah.net- User : $username Expire Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/alluser
+       echo "echo "VPS-THIRD-VPN- User : $username Expire Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/alluser
        todaystime=`date +%s`
        if [ $userexpireinseconds -ge $todaystime ] ;
            then
 			:
        else
-       echo "echo "VPS-Murah.net- Username : $username sudah expired Pada Tanggal: $tgl $bulantahun dan telah di delete pada tanggal: $hariini "" >> /usr/local/bin/deleteduser
+       echo "echo "VPS-THIRD-VPN- Username : $username sudah expired Pada Tanggal: $tgl $bulantahun dan telah di delete pada tanggal: $hariini "" >> /usr/local/bin/deleteduser
 	   echo "Username $username yang expired pada $tgl $bulantahun telah berhasil dihapus dari sistem pada $hariini"
        userdel $username
        fi
@@ -4104,16 +4104,16 @@ clear
   echo "รายละเอียดดังกล่าวสำหรับบัญชีผู้ใช้ $Username"
   echo "---------------------------------------"
   echo "   ชื่อผู้ใช้        : $username"
-  echo "   รหัสผ่าน        : $userpass"
-  echo "   วันหมดอายุ : $tanggal_expired_display"
+  echo "   รหัสผ่าน       : $userpass"
+  echo "   วันหมดอายุ     : $tanggal_expired_display"
   echo "--------------------------------------"
 else
-echo "Username tidak ditemukan di server anda"
+echo "ไม่พบชื่อผู้ใช้บนเซิร์ฟเวอร์ของคุณ"
     exit 1
 fiuser-expire0100777000000000000000000000333113133477351010216 0ustar00#!/bin/bash
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/infouser
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/expireduser
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/alluser
+echo "echo "Script Created By THIRD-VPN"" > /usr/local/bin/infouser
+echo "echo "Script Created By THIRD-VPN"" > /usr/local/bin/expireduser
+echo "echo "Script Created By THIRD-VPN"" > /usr/local/bin/alluser
 chmod +x /usr/local/bin/infouser
 chmod +x /usr/local/bin/expireduser
 chmod +x /usr/local/bin/alluser
@@ -4137,22 +4137,22 @@ for((i=1; i<=$totalaccounts; i++ ))
            username=$username" " 
        done
        bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-       echo "echo "VPS-Murah.net- User : $username Expire Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/alluser
+       echo "echo "VPS-THIRD-VPN- User : $username Expire Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/alluser
        todaystime=`date +%s`
        if [ $userexpireinseconds -ge $todaystime ] ;
            then
            timeto7days=$(( $todaystime + 604800 ))
                 if [ $userexpireinseconds -le $timeto7days ];
                 then                     
-                     echo "echo "VPS-Murah.net- User : $username Akan Segera Expired Pada tanggal : $tgl $bulantahun"" >> /usr/local/bin/infouser
+                     echo "echo "VPS-THIRD-VPN- User : $username Akan Segera Expired Pada tanggal : $tgl $bulantahun"" >> /usr/local/bin/infouser
                 fi
        else
-       echo "echo "VPS-Murah.net- User : $username Sudah Expired Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/expireduser
+       echo "echo "VPS-THIRD-VPN- User : $username Sudah Expired Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/expireduser
        passwd -l $username
        fi
 doneuser-expire-pptp0100777000000000000000000000732213133477361011204 0ustar00#!/bin/bash
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/infouser-pptp
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/expireduser-pptp
+echo "echo "Script Created By VPS-THIRD-VPN"" > /usr/local/bin/infouser-pptp
+echo "echo "Script Created By VPS-THIRD-VPN"" > /usr/local/bin/expireduser-pptp
 chmod +x /usr/local/bin/infouser-pptp
 chmod +x /usr/local/bin/expireduser
 chmod +x /etc/ppp/chap-secrets
@@ -4173,7 +4173,7 @@ for((i=1; i<=$totalaccounts; i++ ))
            timeto7days=$(( $todaystime + 604800 ))
                 if [ $userexpireinseconds -le $timeto7days ];
                 then                     
-                     echo "echo "VPS-Murah.net- User : $username Akan Segera Expired Pada tanggal : $tgl $bulantahun"" >> /usr/local/bin/infouser-pptp
+                     echo "echo "VPS-THIRD-VPN- User : $username Akan Segera Expired Pada tanggal : $tgl $bulantahun"" >> /usr/local/bin/infouser-pptp
                 fi
        else
        echo "echo "VPS-Murah.net- User : $username Sudah Expired Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/expireduser-pptp
@@ -4322,8 +4322,8 @@ do
 			do
                 if [ ${jumlah[$i]} -gt $MAX ]; then
                         date=`date +"%Y-%m-%d %X"`;
-                        echo "VPS-Murah.net - $date - ${username[$i]} - ${jumlah[$i]}";
-                        echo "VPS-Murah.net - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-limit.txt;
+                        echo "VPS-THIRD-VPN - $date - ${username[$i]} - ${jumlah[$i]}";
+                        echo "VPS-THIRD-VPN - $date - ${username[$i]} - ${jumlah[$i]}" >> /root/log-limit.txt;
                         kill ${pid[$i]};
                         pid[$i]="";
                         j=`expr $j + 1`;
