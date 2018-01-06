@@ -505,10 +505,10 @@ clear
 echo " "
 echo "ติดตั้งเสร็จแล้ว! โปรดอ่านและบันทึกคำอธิบายการตั้งค่าเซิร์ฟเวอร์!"
 echo " "
-echo "--------------------------- คำอธิบายเกี่ยวกับการตั้งค่าเซิร์ฟเวอร์ ----------------------------"
-echo "                                      Modified by THIRD-VPN                             "
-echo "                                               ยินดีต้อนรับ                        "
-echo "                                          ขอบคุณที่ใช้บริการ                                "
+echo "------------------------- คำอธิบายเกี่ยวกับการตั้งค่าเซิร์ฟเวอร์ ----------------------------"
+echo "                             Modified by THIRD-VPN                             "
+echo "                                    ยินดีต้อนรับ                        "
+echo "                                  ขอบคุณที่ใช้บริการ                                "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "ข้อมูลเซิร์ฟเวอร์"  | tee -a log-install.txt
@@ -535,7 +535,7 @@ echo "   - nethogs"  | tee -a log-install.txt
 echo "   - screenfetch"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "ข้อมูลพรีเมี่ยมสคริปต์"  | tee -a log-install.txt
-echo "   คำสั่งเพื่อแสดงรายการของคำสั่ง: เมนู"  | tee -a log-install.txt
+echo "   คำสั่งเพื่อแสดงรายการของคำสั่ง: menu"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   คำอธิบายสคริปต์และการตั้งค่า VPS"| tee -a log-install.txt
 echo "   สามารถดูได้จาก: THIRD-VPN"  | tee -a log-install.txt
